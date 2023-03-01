@@ -1,4 +1,8 @@
 using System.ComponentModel.DataAnnotations;
+using RepuestoM.Shared.Request;
+using RepuestoM.Shared.Records;
+
+
 
 namespace RespuestoM.Server.Models;
 
@@ -13,5 +17,10 @@ public class UsuarioRol
  public bool PermisoParaCrear{get;set;}
  public bool PermisoParaEditar{get;set;}
  public bool PermisoParaEliminar{get;set;}
- public virtual ICollection<UsuarioRol>? Usuarios {get;set;}
+ public virtual ICollection<UsuarioRol>? Usuarios {get;set;}= null!;
+
+   public UsuarioRollRecords ToRecords()
+{
+    return new UsuarioRollRecords(Id,Nombre,PermisoParaCrear,PermisoParaEditar,PermisoParaEliminar);
+}
 }

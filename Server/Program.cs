@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.ResponseCompression;
 using RepuestoM.Server.Context;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

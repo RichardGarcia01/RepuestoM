@@ -1,5 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using RepuestoM.Shared.Request;
+using RepuestoM.Shared.Records;
+
 namespace RespuestoM.Server.Models;
 
 public class Usuario 
@@ -28,5 +30,7 @@ public class Usuario
         password = request.password;
 
     }
+ 
+
 
 }
