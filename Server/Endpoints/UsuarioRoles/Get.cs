@@ -12,9 +12,9 @@ public class Get : EndpointBaseAsync.WithoutRequest.WithActionResult<Repuesta>
 {
     private readonly IMyDbContext dbContext;
     
-    public Get(IMyDbContext dbContext)
+    public  Get(IMyDbContext dbContext)
     {
-        this.dbContext= dbContext;
+        this .dbContext = dbContext;
     }
     [HttpGet(UsuarioRolRouteManager.BASE)]
 
@@ -24,7 +24,7 @@ public class Get : EndpointBaseAsync.WithoutRequest.WithActionResult<Repuesta>
         .Select(rol=>rol.ToRecord())
         .ToListAsync(cancellationToken);
 
-         return Repuesta.success((IEnumerable<UsuarioRollRecords>)roles);
+         return Repuesta.success(roles);
        }
             catch(Exception ex )
             {

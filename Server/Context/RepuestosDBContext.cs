@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using RespuestoM.Server.Models;
 namespace RepuestoM.Server.Context;
-internal interface IMyDbContext
+public interface IMyDbContext
 {
     DbSet<Usuario> Usuarios { get; set; }
-    DbSet<Usuario> UsuariosRoles { get; set; }
+    DbSet<UsuarioRol> UsuariosRoles { get; set; }
 
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 }
@@ -23,7 +23,7 @@ internal class RepuestosDBContext : DbContext, IMyDbContext
 
     #region  tabla de la BD.
     public DbSet<Usuario> Usuarios { get; set; } = null!;
-    public DbSet<Usuario> UsuariosRoles { get; set; } = null!;
+    public DbSet<UsuarioRol> UsuariosRoles { get; set; } = null!;
     #endregion
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default!)
     {

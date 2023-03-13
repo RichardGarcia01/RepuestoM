@@ -38,7 +38,7 @@ public void Modificar(UsuarioRolUpdateRequest request){
     if(PermisoParaEliminar != request.PermisoParaEliminar)
        PermisoParaEditar = request.PermisoParaEliminar;      
 }
-public UsuarioRollRecords ToRecords()
+public UsuarioRollRecords ToRecord()
 {
     return new UsuarioRollRecords(Id,Nombre,PermisoParaCrear,PermisoParaEditar,PermisoParaEliminar);
 }
