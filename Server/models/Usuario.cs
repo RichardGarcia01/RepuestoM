@@ -30,7 +30,9 @@ public class Usuario
         password = request.password;
 
     }
- 
 
-
+    internal object ToRecord()
+    {
+        throw new NotImplementedException();
+    }
 }
