@@ -1,4 +1,5 @@
-using System.Collections.Generic;
+
+
 
 namespace RepuestoM.Shared.Wrapper;
 
@@ -43,10 +44,17 @@ public class Resultlist<T>:Result
          Items= items
         };   
     }
-    
 
+    public static Microsoft.AspNetCore.Mvc.ActionResult<Resultlist<int>> success(int id)
+    {
+        throw new NotImplementedException();
+    }
 
-  }
+    public static Microsoft.AspNetCore.Mvc.ActionResult<Resultlist<UsuarioRollRecords>> success(object id)
+    {
+        throw new NotImplementedException();
+    }
+}
 
   
 

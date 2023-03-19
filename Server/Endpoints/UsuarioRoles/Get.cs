@@ -1,11 +1,15 @@
+using System.Data;
 using Ardalis.ApiEndpoints;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using RepuestoM.Server.Context;
+
+using RepuestoM.Shared.Wrapper;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.EntityFrameworkCore;
+
 using RepuestoM.Shared.Records;
 using RepuestoM.Shared.Router;
-using RepuestoM.Shared.Wrapper;
-
+ 
 namespace RepuestoM.Server.Endpoints.UsuarioRoles;
 using Repuesta = Resultlist<UsuarioRollRecords>;
 public class Get : EndpointBaseAsync.WithoutRequest.WithActionResult<Repuesta>
